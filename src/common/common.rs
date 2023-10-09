@@ -45,7 +45,23 @@
 //     * each position has a type
 //     * don't need to be the same time
 //     * destructuring thing like js
+//     * tuples without values they call `unit`.
+//   **array**
+//     * every element have the same type.
+//     * fixed length.
+//     * we can get runtime errors when trying to access index out of bounds elements.
+//     * In other low-level languages, this kind of check is not done, and we provide an incorrect index, invalid memory can be accessed. Rust protects you against this kind of error by immediately exiting instead of allowing the memory access and continuing
 
+// **Functions**
+//   * snake_case
+//   * fn keyword
+//   * must declare parameter types
+
+// **expressions**
+//   * calling a function is an expression.
+//   * calling a macro is an expression.
+//   * a new scope block created is an expression  
+//   * Expressions do not include ending semicolons -- if added it will be 1 statement and will nor return a value.
 fn main() {
     let mut x: u32 = 5;
     println!("the value of x: {x}");
@@ -102,4 +118,24 @@ fn main() {
     println!("single values {zero}");
     println!("single values {one}");
     println!("single values {two}");
+
+    let ray = [4, 3, 7, 9];
+    let ray2: [u8; 2] = [1, 2];
+    let r1 = ray[0];
+    let r2 = ray2[1];
+    println!("array {r1} {r2}");
+
+    foo_bar();
+
+    let nine = {
+      let k = 8;
+      k + 1
+    };
+
+    println!("the nine {nine}");
+}
+
+
+fn foo_bar() {
+  println!("aaaaa");
 }
