@@ -13,3 +13,7 @@ path = "src/the-main/main.rs"
 [[bin]]
 name = "basicgame"
 path = "src/basicgame/bgame.rs"
+
+[[bin]]
+name = "common"
+path = "src/common/common.rs"

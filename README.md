@@ -17,3 +17,7 @@ cargo run --bin hello
 ```shell
 cargo run --bin basicgame
 ```
+
+```shell
+cargo run --bin common
+```

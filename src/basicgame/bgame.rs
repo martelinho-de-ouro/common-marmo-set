@@ -1,19 +1,18 @@
-//! This is almost the same code found in the book: 
+//! This is almost the same code found in the book:
 //! `The Rust Programming Language, 2nd Edition`
 //!
-//! I'm typing this documentation because I found this on 
+//! I'm typing this documentation because I found this on
 //! <https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html>
-//! 
+//!
 //! The code will polite-ask for a number like this:
 //! - Type the number
-//! 
+//!
 //! And then it will printout something like this:
 //! - you typed: 1
-//! 
+//!
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
-
 
 // Rust has a set of items defined in the standard lib.
 // This set is called `prelude`. <https://doc.rust-lang.org/std/prelude/index.html>
@@ -28,7 +27,7 @@ use std::io;
 // the `read_line` is a method from the type `Stdin` which is also called a `handle`
 // `&mut the_number` the string needs to be mutable so the method can change the string's content.
 // `&` the argument is a reference (copy vs reference thing)
-// `read_line` returns a `Result` value, which is an enum that can be in one of multiple possible states and each possible state is called `variant`. 
+// `read_line` returns a `Result` value, which is an enum that can be in one of multiple possible states and each possible state is called `variant`.
 // The purpose of the `Result` is to encode error-handling information.
 // The variants are `Ok` and `Err`. The `Err` contains the info about how or why the thing failed.
 // The `Result` type has an `expect` method that can be called
@@ -44,26 +43,25 @@ use std::io;
 // `parse` returns a `Result` type which is an enum that contains `Ok` and `Err` variants.
 // `_` is a catch-all value ( to match all Err values )
 fn main() {
-    
     let generated_number = rand::thread_rng().gen_range(1..=2000);
-    
+
     // println!("the generated number is: {generated_number}");
-    
+
     loop {
         println!("Type the number");
         let mut the_number = String::new();
 
         io::stdin()
-        .read_line(&mut the_number)
-        .expect("unable to read line");
-    
+            .read_line(&mut the_number)
+            .expect("unable to read line");
+
         let the_number: u32 = match the_number.trim().parse() {
             Ok(n) => n,
             Err(_) => continue,
         };
-    
+
         println!("you typed: {the_number}");
-    
+
         match the_number.cmp(&generated_number) {
             Ordering::Less => println!("small"),
             Ordering::Greater => println!("big"),
@@ -73,7 +71,4 @@ fn main() {
             }
         }
     }
-
-
-    
 }
