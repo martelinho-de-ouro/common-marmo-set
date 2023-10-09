@@ -56,12 +56,17 @@
 //   * snake_case
 //   * fn keyword
 //   * must declare parameter types
+//   * we can return early with `return` but most functions returns the last expression implicitly.
 
 // **expressions**
 //   * calling a function is an expression.
 //   * calling a macro is an expression.
-//   * a new scope block created is an expression  
+//   * a new scope block created is an expression
 //   * Expressions do not include ending semicolons -- if added it will be 1 statement and will nor return a value.
+
+// **loops**
+//   * loop returns values
+//   * it contains loop-labels
 fn main() {
     let mut x: u32 = 5;
     println!("the value of x: {x}");
@@ -128,14 +133,79 @@ fn main() {
     foo_bar();
 
     let nine = {
-      let k = 8;
-      k + 1
+        let k = 8;
+        k + 1
     };
 
     println!("the nine {nine}");
+
+    let bar_foo = bar_foo();
+    println!("the bar_foo value {bar_foo}");
+
+    let aaa2 = aaa(1);
+    println!("the aaa2 {aaa2}");
+
+    let number = 6;
+
+    if number % 4 == 0 {
+        println!("number is divisible by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisible by 3");
+    } else if number % 2 == 0 {
+        println!("number is divisible by 2");
+    } else {
+        println!("number is not divisible by 4, 3, or 2");
+    }
+
+    let mut counter = 0;
+    let the_result_of_the_loop = loop {
+        counter += 1;
+        if counter == 300 {
+            break counter;
+        }
+    };
+    println!("the result {the_result_of_the_loop}");
+
+    let mut count2 = 0;
+    'counting_up: loop {
+        println!("count {count2}");
+        let mut remaining = 5;
+
+        loop {
+            println!("remaining {remaining}");
+            if remaining == 4 {
+                break;
+            }
+            if count2 == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+        count2 += 1;
+    }
+    println!("end count2 {count2} ");
+
+
+    let mut other_number = 3;
+    while other_number != 0 {
+        println!("{other_number}");
+        other_number -= 1;
+    }
+
+    let things = [10, 20, 30, 40];
+    for t in things {
+        println!("{t}");
+    }
 }
 
-
 fn foo_bar() {
-  println!("aaaaa");
+    println!("aaaaa");
+}
+
+fn bar_foo() -> i8 {
+    9
+}
+
+fn aaa(y: i16) -> i16 {
+    y + 3
 }

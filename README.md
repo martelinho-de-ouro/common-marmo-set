@@ -21,3 +21,7 @@ cargo run --bin basicgame
 ```shell
 cargo run --bin common
 ```
+
+```shell
+cargo run --bin owner
+```

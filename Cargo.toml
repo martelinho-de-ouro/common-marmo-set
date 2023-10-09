@@ -17,3 +17,7 @@ path = "src/basicgame/bgame.rs"
 [[bin]]
 name = "common"
 path = "src/common/common.rs"
+
+[[bin]]
+name = "owner"
+path = "src/owner/owner.rs"
