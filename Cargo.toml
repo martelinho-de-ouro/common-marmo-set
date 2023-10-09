@@ -3,6 +3,13 @@ name = "common-marmo-set"
 version = "0.1.0"
 edition = "2021"
 
+[dependencies]
+rand = "0.8.5"
+
 [[bin]]
 name = "hello"
-path = "src/main.rs"
+path = "src/the-main/main.rs"
+
+[[bin]]
+name = "basicgame"
+path = "src/basicgame/bgame.rs"
