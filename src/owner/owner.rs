@@ -15,9 +15,26 @@
 //     * each value in Rust has 1 owner
 //     * there can only be 1 owner at a time
 //     * when the owner goes out of scope, the value will be dropped
-//   * var scope
-//    
+//   * In Rust the mem is automatically returned once the variable that owns it goes out of scope.
+//     * When a variable goes out of scope, Rust calls a special function called `drop` ( called automatically at the closing curly bracket )
+//   * Rust will never create `deep` copies of the data.
+//     * In case needed we can use the `clone` method.
+//   * If a type implements the `Copy` trait, vars that use it don't move, but rather are copied.
+//     * Rust won't let us annotate a type with `Copy` if the type or any of it parts, has implemented the `Drop` trait.
 fn main() {
-  let foo = "aaa";
-  
+  let _foo = "aaa";
+  let mut bar = String::from("aaa");
+  bar.push_str(",bar_foo");
+  println!("{bar}");
+
+  // stack-data-only
+  // K, got the part of the s1 invalidation.
+  // let s1 = String::from("111");
+  // let s2 = s1;
+  // println!("{s1}");
+  // -- the clone -- also heap-data
+  let s1 = String::from("111");
+  let s2 = s1.clone();
+  println!("{s1} and {s2}");
+
 }
