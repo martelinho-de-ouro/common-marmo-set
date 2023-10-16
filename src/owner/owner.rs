@@ -1,5 +1,5 @@
 //! ownership
-//! A set of rules that govern how a Rust program manages memory.
+//! A set of rules that governs how a Rust program manages memory.
 
 // Some languages uses GC others we need to free and allocate the memory and Rust uses another approach:
 //   * the memory is managed through a system of ownership with a set of rules that the compiler checks.
@@ -28,7 +28,7 @@ fn main() {
   println!("{bar}");
 
   // stack-data-only
-  // K, got the part of the s1 invalidation.
+  // Ok, I got the part of the s1 invalidation.
   // let s1 = String::from("111");
   // let s2 = s1;
   // println!("{s1}");
