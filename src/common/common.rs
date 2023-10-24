@@ -96,12 +96,13 @@ fn main() {
     // Literals
     let z = 44u8;
     let y: u8 = 255;
+    let k = 255_u8;
     let dec = 12_345;
     let hex = 0xff;
     let oct = 0o77;
     let bin = 0b1111_0000;
     let byt = b'a';
-    println!("literals {z} {y} {dec} {hex} {oct} {bin} {byt}");
+    println!("literals {z} {y} {k} {dec} {hex} {oct} {bin} {byt}");
 
     let a = 2.345;
     let b: f32 = 3.1;
