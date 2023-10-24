@@ -7,10 +7,35 @@
 //   * To be used when we want to give the whole tuple a name and make the tuple a diff type from other tuples, and when naming each field would be verbose or boring.
 // * It contains a thing called unit-like-struct ( strutcs with no fields )
 //   * useful when we need to implement a trait on some type but don't have any data to be stored in the type itself.
+// * `Methods` are defined within the context of a struct, or enum or a trait object.
+//   * %self is 1 alias for self:&Self.
+//   * Inside impl block, Self is 1 alias for the type of the impl block.
+//   * methods must have 1 parameter named `self` of the type Self as first parameter.
+//   * by adding & to indicate that this method borrows the Self instance.
+//   * methods can take ownership of self, borrow self immutability, or borrow self mutability.
+//   * in case to change the value of the instance we need to use `&mut self` instead.
+//   * the main reason for using methods instead of functions is related to organization (with sort of OO style thing).
+// * Functions defined inside impl block are called associated-functions.
+//   * they are often used for constructors that will return a new instance of the struct (like the `new` keyword).
+#[derive(Debug)]
 struct Car {
     name: String,
     speed: i16,
     fabrication_date: String,
+}
+
+impl Car {
+    fn run(&self) -> String {
+        String::from("vrooooommmmm")
+    }
+
+    fn fake_new(name: String, speed: i16, fabrication_date: String) -> Self {
+        Self {
+            name,
+            speed,
+            fabrication_date
+        }
+    }
 }
 
 fn main() {
@@ -73,6 +98,16 @@ fn main() {
     // sends to stderr
     dbg!(Never);
     dbg!(bar_tuple_struct_instance);
+
+    println!("{}", car1.run());
+    // println!("{}", car2.run());
+    // println!("{}", car3.run());
+    println!("{}", car4.run());
+
+    // Rust nas no `new` so we can create a fake_new:
+    let c = Car::fake_new(String::from("a"), 2, String::from("b"));
+    dbg!("{:?}", c);
+
 }
 
 fn make_a_car(name: String, speed: i16, fabrication_date: String) -> Car {
