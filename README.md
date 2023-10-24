@@ -25,3 +25,11 @@ cargo run --bin common
 ```shell
 cargo run --bin owner
 ```
+
+```shell
+cargo run --bin stru
+```
+
+```shell
+cargo run --bin enumm
+```

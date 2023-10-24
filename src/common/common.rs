@@ -185,7 +185,6 @@ fn main() {
     }
     println!("end count2 {count2} ");
 
-
     let mut other_number = 3;
     while other_number != 0 {
         println!("{other_number}");

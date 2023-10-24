@@ -21,3 +21,11 @@ path = "src/common/common.rs"
 [[bin]]
 name = "owner"
 path = "src/owner/owner.rs"
+
+[[bin]]
+name = "stru"
+path = "src/stru/stru.rs"
+
+[[bin]]
+name = "enumm"
+path = "src/enumm/enumm.rs"
