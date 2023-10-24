@@ -10,42 +10,54 @@
 struct Car {
     name: String,
     speed: i16,
-    fabrication_date: String
+    fabrication_date: String,
 }
 
-fn main () {
+fn main() {
     let car1 = Car {
         name: String::from("Palio"),
         speed: 180,
-        fabrication_date: String::from("01/01/1300")
+        fabrication_date: String::from("01/01/1300"),
     };
 
-    println!("{:?} {:?} {:?}", car1.name, car1.speed, car1.fabrication_date);
+    println!(
+        "{:?} {:?} {:?}",
+        car1.name, car1.speed, car1.fabrication_date
+    );
 
     // using field-init-shorthand
     let car2 = make_a_car(String::from("foo"), 1, String::from("01/01/9002"));
-    println!("{:?} {:?} {:?}", car2.name, car2.speed, car2.fabrication_date);
+    println!(
+        "{:?} {:?} {:?}",
+        car2.name, car2.speed, car2.fabrication_date
+    );
 
     // using struct-update-syntax
     let car3 = Car {
         name: car2.name,
         speed: 10,
-        fabrication_date: car2.fabrication_date 
+        fabrication_date: car2.fabrication_date,
     };
-    println!("{:?} {:?} {:?}", car3.name, car3.speed, car3.fabrication_date);
+    println!(
+        "{:?} {:?} {:?}",
+        car3.name, car3.speed, car3.fabrication_date
+    );
 
     // using struct-update-syntax with less code
     let car4 = Car {
         name: String::from("aaa"),
         ..car3 // the remaining fields will get the same values from other car.
     };
-    println!("{:?} {:?} {:?}", car4.name, car4.speed, car4.fabrication_date);
+    println!(
+        "{:?} {:?} {:?}",
+        car4.name, car4.speed, car4.fabrication_date
+    );
 
     // tuple-struct
     #[derive(Debug)]
-    struct Foo (String, String, String);
+    struct Foo(String, String, String);
     #[derive(Debug)]
-    struct Bar (String, String, String);
+    struct Bar(String, String, String);
     // same values, different types
     let foo_tuple_struct_instance = Foo(String::from("a"), String::from("b"), String::from("c"));
     let bar_tuple_struct_instance = Bar(String::from("a"), String::from("b"), String::from("c"));
@@ -57,13 +69,12 @@ fn main () {
     struct Never;
     let finished = Never;
     println!("{:?}", finished);
-    
 }
 
 fn make_a_car(name: String, speed: i16, fabrication_date: String) -> Car {
     Car {
         name,
         speed,
-        fabrication_date
+        fabrication_date,
     }
 }
