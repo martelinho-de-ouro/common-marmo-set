@@ -68,7 +68,11 @@ fn main() {
     #[derive(Debug)]
     struct Never;
     let finished = Never;
+    // sends to stdout
     println!("{:?}", finished);
+    // sends to stderr
+    dbg!(Never);
+    dbg!(bar_tuple_struct_instance);
 }
 
 fn make_a_car(name: String, speed: i16, fabrication_date: String) -> Car {
