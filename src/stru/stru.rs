@@ -33,7 +33,7 @@ impl Car {
         Self {
             name,
             speed,
-            fabrication_date
+            fabrication_date,
         }
     }
 }
@@ -107,7 +107,6 @@ fn main() {
     // Rust nas no `new` so we can create a fake_new:
     let c = Car::fake_new(String::from("a"), 2, String::from("b"));
     dbg!("{:?}", c);
-
 }
 
 fn make_a_car(name: String, speed: i16, fabrication_date: String) -> Car {
