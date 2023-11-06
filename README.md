@@ -33,3 +33,7 @@ cargo run --bin stru
 ```shell
 cargo run --bin enumm
 ```
+
+```shell
+cargo run --bin modpub
+```

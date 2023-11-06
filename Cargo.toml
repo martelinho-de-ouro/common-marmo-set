@@ -8,24 +8,28 @@ rand = "0.8.5"
 
 [[bin]]
 name = "hello"
-path = "src/the-main/main.rs"
+path = "src/bin/main.rs"
 
 [[bin]]
 name = "basicgame"
-path = "src/basicgame/bgame.rs"
+path = "src/bin/bgame.rs"
 
 [[bin]]
 name = "common"
-path = "src/common/common.rs"
+path = "src/bin/common.rs"
 
 [[bin]]
 name = "owner"
-path = "src/owner/owner.rs"
+path = "src/bin/owner.rs"
 
 [[bin]]
 name = "stru"
-path = "src/stru/stru.rs"
+path = "src/bin/stru.rs"
 
 [[bin]]
 name = "enumm"
-path = "src/enumm/enumm.rs"
+path = "src/bin/enumm.rs"
+
+[[bin]]
+name = "modpub"
+path = "src/modpub/modpub.rs"
