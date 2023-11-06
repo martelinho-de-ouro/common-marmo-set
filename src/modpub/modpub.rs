@@ -15,7 +15,7 @@
 // * A BarFoo type inside foo-bar module would be found at
 //   * crate::foo::bar::BarFoo
 // * `pub` makes the thing (module and items) public, without `pub` the thing is private.
-
+// * The comments continues on `fakegame` directory
 use crate::foo::bar::FooBar;
 
 pub mod foo;
