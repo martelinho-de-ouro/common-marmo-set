@@ -12,6 +12,8 @@ fn join_the_game() {
 
 }
 
+use game::make_a_fake_telemetry;
+
 use crate::game::game_play::increase_player_score;
 
 mod game {
@@ -38,7 +40,7 @@ mod game {
         }
     }
 
-    fn make_a_fake_telemetry() {
+    pub fn make_a_fake_telemetry() {
         // super is similar to `..` related to the path.
         super::join_the_game();
         // in the case of enum, when adding pub all the variants are public.
@@ -57,6 +59,10 @@ pub fn play_the_game() {
 
     // use shortcut usage..
     increase_player_score();
+
+    println!("test");
+    
+    make_a_fake_telemetry();
 }
 
 

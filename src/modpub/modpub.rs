@@ -17,10 +17,11 @@
 // * `pub` makes the thing (module and items) public, without `pub` the thing is private.
 // * The comments continues on `fakegame` directory
 use crate::foo::bar::FooBar;
-
+use fakegame::*;
 pub mod foo;
 
 fn main() {
     let foobar = FooBar {};
     println!("result: {:?}", foobar);
+    println!("{:?}", play_the_game());
 }
