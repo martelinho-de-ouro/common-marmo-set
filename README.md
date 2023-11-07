@@ -37,3 +37,7 @@ cargo run --bin enumm
 ```shell
 cargo run --bin modpub
 ```
+
+```shell
+cargo run --bin coll
+```

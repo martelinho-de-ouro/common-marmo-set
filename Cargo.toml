@@ -34,6 +34,10 @@ path = "src/bin/enumm.rs"
 name = "modpub"
 path = "src/modpub/modpub.rs"
 
+[[bin]]
+name = "coll"
+path = "src/bin/coll.rs"
+
 [lib]
 name = "fakegame"
 path = "src/fakegame/lib.rs"
