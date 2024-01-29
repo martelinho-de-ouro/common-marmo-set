@@ -2,7 +2,18 @@
 // Strings
 // HashMaps
 
-// 
+// * Strings are implemented as collection of bytes with methods to provide 
+//   useful functionality when those bytes are interpreted as text.
+// * Rust has only 1 string type in the core --> `str` usually `&str`.
+// * The `String` type provided by stdlib is a growable, mutable owned and UTF-8
+//   encoded string type.
+// * "Many of the same operations available with Vec<T> are available with 
+//    String as well because String is actually implemented as a wrapper around 
+//    a vector of bytes with some extra guarantees, restrictions, 
+//    and capabilities."
+// * String::from and to_string do the same thing
+// * We can use the `+` operator or the `format!` macro to concatenate 
+//   String values.
 fn main() {
     let mut v1: Vec<i8> = Vec::new();
     println!("{:?}", v1);
@@ -71,5 +82,14 @@ fn main() {
     {
         let v3 = vec![1,1,2];
     } // after this the memory is cleaned up.
+
+    let mut the_foo_bar = String::from("f");
+    let the_foo = String::from("foo");
+    let the_bar = String::from("bar");
+    the_foo_bar.push('o');
+
+    println!("{the_foo_bar}");
+    println!("{the_foo}");
+    println!("{the_bar}");
 
 }

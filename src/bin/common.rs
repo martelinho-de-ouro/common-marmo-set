@@ -1,6 +1,5 @@
 //! Common things.
 
-// I already know the `mut` part.
 // The diffs between variable and constant
 //   * not allowed to use `mut`
 //   * it is declared with `const`
