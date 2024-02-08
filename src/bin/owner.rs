@@ -34,8 +34,8 @@
 //   * A slice is a kind of ref that does not have ownership.
 //     * `string slice` is a ref to part of a `String`
 fn main() {
-    let _foo = "aaa";
-    let mut bar = String::from("aaa");
+    let _foo: &str = "aaa";
+    let mut bar: String = String::from("aaa");
     bar.push_str(",bar_foo");
     println!("{bar}");
 
@@ -43,8 +43,8 @@ fn main() {
     // so they are stored entirely on the stack then
     // copies of the values are quick.
     // we don't need .clone() here.
-    let x = 1;
-    let y = x;
+    let x: i32 = 1;
+    let y: i32 = x;
     println!("x = {x}, y = {y}");
 
     // stack-data-only
@@ -54,8 +54,8 @@ fn main() {
     // println!("{s1}");
     // -- the clone -- also copy the heap-data not only the stack.
     // ( .clone() may be expensive )
-    let s1 = String::from("111");
-    let s2 = s1.clone();
+    let s1: String = String::from("111");
+    let s2: String = s1.clone();
     println!("{s1} and {s2}");
 
     let v = String::from("qwerty");

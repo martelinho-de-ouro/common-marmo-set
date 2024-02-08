@@ -76,14 +76,14 @@ fn main() {
     println!("the const {FOO_BAR}");
 
     {
-        let x = x + 1;
+        let x: u32 = x + 1;
         println!("the value of X inside the scope {x}");
     }
 
     println!("the value of X outside the scope {x}");
 
-    let foo = "foo";
-    let foo = foo.len();
+    let foo: &str = "foo";
+    let foo: usize = foo.len();
     println!("the foo {foo}");
 
     // ---------------------------------------
@@ -93,11 +93,11 @@ fn main() {
     // ---------------------------------------
 
     // Literals
-    let z = 44u8;
+    let z: u8 = 44u8;
     let y: u8 = 255;
-    let k = 255_u8;
-    let dec = 12_345;
-    let hex = 0xff;
+    let k: u8 = 255_u8;
+    let dec: i32 = 12_345;
+    let hex: i32 = 0xff;
     let oct = 0o77;
     let bin = 0b1111_0000;
     let byt = b'a';
