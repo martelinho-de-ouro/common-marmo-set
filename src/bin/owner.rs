@@ -35,6 +35,7 @@
 //     * `string slice` is a ref to part of a `String`
 fn main() {
     let _foo: &str = "aaa";
+    _foo.clone();
     let mut bar: String = String::from("aaa");
     bar.push_str(",bar_foo");
     println!("{bar}");
