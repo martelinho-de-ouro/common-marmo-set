@@ -38,6 +38,10 @@ path = "src/modpub/modpub.rs"
 name = "coll"
 path = "src/bin/coll.rs"
 
+[[bin]]
+name = "stringas"
+path = "src/bin/stringas.rs"
+
 [lib]
 name = "fakegame"
 path = "src/fakegame/lib.rs"
