@@ -84,8 +84,10 @@ fn main() {
     #[derive(Debug)]
     struct Bar(String, String, String);
     // same values, different types
-    let foo_tuple_struct_instance = Foo(String::from("a"), String::from("b"), String::from("c"));
-    let bar_tuple_struct_instance = Bar(String::from("a"), String::from("b"), String::from("c"));
+    let foo_tuple_struct_instance =
+        Foo(String::from("a"), String::from("b"), String::from("c"));
+    let bar_tuple_struct_instance =
+        Bar(String::from("a"), String::from("b"), String::from("c"));
 
     println!("{:?}", foo_tuple_struct_instance);
     println!("{:?}", bar_tuple_struct_instance);

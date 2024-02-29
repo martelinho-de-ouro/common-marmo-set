@@ -8,9 +8,7 @@
 //          ├── find_best_player
 //          ├── calculate_statistics
 
-fn join_the_game() {
-
-}
+fn join_the_game() {}
 
 use game::make_a_fake_telemetry;
 
@@ -24,20 +22,14 @@ mod game {
             crate::player_usage::Player::jump();
         }
 
-        fn block_player() {
-
-        }
+        fn block_player() {}
     }
 
     mod game_rank {
         use super::game_play::increase_player_score;
 
-        fn find_best_player() {
-
-        }
-        fn calculate_statistics() {
-
-        }
+        fn find_best_player() {}
+        fn calculate_statistics() {}
     }
 
     pub fn make_a_fake_telemetry() {
@@ -48,11 +40,9 @@ mod game {
     }
 }
 
-
-
 pub fn play_the_game() {
     // abs path
-    crate::game::game_play::increase_player_score();    
+    crate::game::game_play::increase_player_score();
 
     // relative path
     game::game_play::increase_player_score();
@@ -61,10 +51,9 @@ pub fn play_the_game() {
     increase_player_score();
 
     println!("test");
-    
+
     make_a_fake_telemetry();
 }
-
 
 mod player_usage {
     // We can restrict the visibility of separated fields when using struct.
@@ -87,7 +76,6 @@ mod resources_usage {
     #[derive(Debug)]
     pub enum Resource {
         Cpu,
-        Memory
+        Memory,
     }
 }
-

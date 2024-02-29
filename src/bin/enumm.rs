@@ -1,16 +1,16 @@
 // * To define a type with its variants.
-// * Strutcs --> to group related fields and data | enums --> a way of saying a 
+// * Strutcs --> to group related fields and data | enums --> a way of saying a
 //   value is one of a possible set of values.
 // * We can put data directly into each enum variant.
-// * The name of each variant also becomes a function that constructs an 
+// * The name of each variant also becomes a function that constructs an
 //   instance of the enum.
 // * Each variant can have different types and amounts of associated data.
 // * We can put any kind of data inside an enum variant, including another enum.
 // * We can defined methods using `impl` (similar to structs)
-// * `Option` is another enum defined by stdlib and the Option type encodes the 
+// * `Option` is another enum defined by stdlib and the Option type encodes the
 //   scenario in which a value could be something or nothing.
 // * Rust has no `null` feature.
-// 
+//
 #[derive(Debug)]
 enum Fuel {
     Gasoline(f64, String), // variant (with data)

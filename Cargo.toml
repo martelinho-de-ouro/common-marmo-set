@@ -12,7 +12,7 @@ path = "src/bin/main.rs"
 
 [[bin]]
 name = "basicgame"
-path = "src/bin/bgame.rs"
+path = "src/bin/basicgame.rs"
 
 [[bin]]
 name = "common"
@@ -41,6 +41,14 @@ path = "src/bin/coll.rs"
 [[bin]]
 name = "stringas"
 path = "src/bin/stringas.rs"
+
+[[bin]]
+name = "stdinlines"
+path = "src/bin/stdinlines.rs"
+
+[[bin]]
+name = "as"
+path = "src/bin/as.rs"
 
 [lib]
 name = "fakegame"

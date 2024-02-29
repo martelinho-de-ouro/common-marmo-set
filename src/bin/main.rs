@@ -1,10 +1,5 @@
-// the main function.
-
-/* another comment here checking what happens
-with vscode every time some char is typed. */
-
+/// the main **function.
 fn main() {
-    // macros `!` are specific types of methods, they are not functions.
+    // macros `!` are specific types of **methods, they are not **functions.
     println!("abcde");
-
 }
