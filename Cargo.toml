@@ -50,6 +50,10 @@ path = "src/bin/stdinlines.rs"
 name = "as"
 path = "src/bin/as.rs"
 
+[[bin]]
+name = "fear"
+path = "src/bin/fear.rs"
+
 [lib]
 name = "fakegame"
 path = "src/fakegame/lib.rs"

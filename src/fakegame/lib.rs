@@ -8,6 +8,8 @@
 //          ├── find_best_player
 //          ├── calculate_statistics
 
+#![allow(unused)]
+
 fn join_the_game() {}
 
 use game::make_a_fake_telemetry;

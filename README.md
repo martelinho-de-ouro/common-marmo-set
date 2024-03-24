@@ -41,3 +41,7 @@ cargo run --bin modpub
 ```shell
 cargo run --bin coll
 ```
+
+```shell
+cargo run --bin fear
+```
